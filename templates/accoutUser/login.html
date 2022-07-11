@@ -1,0 +1,25 @@
+{% extends 'eBord/basic.html' %}
+{% block title %}
+Вход на сайт
+{% endblock title %}
+{% block content %}
+    <div class="add-form">
+        <h2>Вход</h2>
+        {% if user.is_authenticated %}
+            <p>Вы уже выполнили вход</p>
+        {% else %}
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="hidden" value="{{ next }}">
+                <input type="submit" value="Войти" class="form-btn">
+            </form>
+            <hr>
+            <p>Ещё не зарегистрированы ?</p>
+            <a href="{% url 'reg' %}">Зарегистрироваться</a>
+            <hr>
+            <p>Забыли пароль?</p>
+            <a href="{% url 'password_reset' %}">Восстановление пароля</a>
+        {% endif %}
+    </div>
+{% endblock content %}

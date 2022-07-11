@@ -1,0 +1,28 @@
+{% extends "eBord/basic.html" %}
+{% block title %}
+    Объявление: {{ item.title }}
+{% endblock title %}
+{% block content %}
+    <div class="detail-stl">
+        <img src="{{ item.image.url }}" height="200" width="200">
+        <ul class="detail-info">
+            <li class="detail-bld">{{ item.title|capfirst }}</li>
+            <hr>
+            <li class="detail-bld">Описание: <p>{{ item.content|capfirst}}</p></li>
+            <li class="detail-bld">Цена: <p>{{ item.price }} Руб.</p></li>
+            <hr>
+            <li class="detail-bld">Категория: <p>{{ item.category }}</p></li>
+            <hr>
+            <li class="detail-bld">Опубликовано: <a href="{% url 'profile' item.author.userprofilemodel.pk %}">{{ item.author }}</a></li>
+            <p>{{ item.date|date:"d.m.Y H:i:s" }}</p>
+            {% if item.author.pk == user.pk or user.is_staff %}
+                <a href="{% url 'change' item.pk %}">
+                    <div class="btn-change">Редактировать</div>
+                </a>
+                <a href="{% url 'delete' item.pk %}">
+                    <div class="btn-change  btn-del-bg">Удалить</div>
+                </a>
+            {% endif %}
+        </ul>
+    </div>
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends "eBord/basic.html" %}
+{% block title %}
+Главная страница
+{% endblock title %}
+{% block content %}
+    <div class="cat-view">
+        <h1>Выберите категорию</h1>
+            {% for category in categories %}
+                <div class="cat">
+                    <a href="{% url 'by_category' category.pk %}">
+                        <img src="{{ category.image.url }}" height="250" width="300">
+                        <h2>{{ category.name }}</h2>
+                    </a>
+                </div>
+            {% endfor %}
+    </div>
+{% endblock content %}

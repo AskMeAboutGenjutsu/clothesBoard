@@ -1,0 +1,57 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static "eBord/main.css" %}">
+</head>
+<body>
+    <div class="position">
+        <header>
+            <h2>ESecondHand</h2>
+            <ul class="link-nav">
+                <li><a href="{% url "home" %}">Главная страница</a></li>
+                <li><a href="{% url "all_ads" %}">Все объявления</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'add' %}">Добавить объявление</a></li>
+                    {% if user.is_staff %}
+                        <li><a href="{% url 'add-cat' %}">Добавить категорию</a></li>
+                        <li><a href="{% url 'change-cat' %}">Редактировать категории</a></li>
+                    {% endif %}
+                    <a href="{% url 'profile' user.userprofilemodel.pk %}">
+                        <div class="reg-btn">Личный кабинет</div>
+                    </a>
+                    <a href="{% url 'logout' %}">
+                        <div class="btn-out">Выйти</div>
+                    </a>
+                {% else %}
+                    <a href="{% url 'reg' %}">
+                        <div class="reg-btn">Зарегистрироваться</div>
+                    </a>
+                    <a href="{% url 'login' %}">
+                        <div class="btn-out btn-out-bg">Войти</div>
+                    </a>
+                {% endif %}
+            </ul>
+        </header>
+        <div class="content">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="message">
+                        <hr>
+                        {{ message }}
+                        <hr>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </div>
+
+</body>
+</html>

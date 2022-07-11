@@ -1,0 +1,306 @@
+body {
+    background-color: #E3FDFD;
+    color: #0f141e;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Tahoma;
+}
+
+
+.position{
+    position: relative;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    background: #71C9CE;
+    display: flex;
+}
+
+header h2{
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.link-nav {
+    padding-left: 12px;
+    padding-top: 5px;
+    display: flex;
+}
+
+.link-nav li{
+    list-style: none;
+    padding-right: 10px;
+}
+
+.reg-btn{
+    border: 1px solid black;
+    height: 20px;
+    margin-top: 7px;
+    padding: 10px 10px 10px 10px;
+    right: 90px;
+    top: 0;
+    position: fixed;
+    background-color: #A6E3E9;
+    border-radius: 20px;
+
+}
+
+.btn-out{
+    background-color: #ff8686;
+    right: 15px;
+    border: 1px solid black;
+    height: 20px;
+    margin-top: 7px;
+    padding: 10px 10px 10px 10px;
+    top: 0;
+    position: fixed;
+    border-radius: 20px;
+}
+
+.btn-change{
+    background-color: #A6E3E9;
+    border: 1px solid black;
+    height: 20px;
+    width: 95px;
+    margin-top: 7px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.btn-change-pswrd{
+    background-color: #42f5ff;
+    border: 1px solid black;
+    height: 20px;
+    width: 105px;
+    margin-top: 7px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.btn-out-bg{
+    background: #A6E3E9;
+}
+
+.btn-user-ads{
+    background-color: dodgerblue;
+    border: 1px solid black;
+    height: 30px;
+    width: 105px;
+    margin-top: 7px;
+    padding: 10px 12px 12px 12px;
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+.btn-del-bg {
+    background: red;
+}
+
+.content{
+    margin-top: 70px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: mediumpurple;
+}
+
+a:visited {
+    color: black;
+}
+
+.abs{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.abs > div{
+    float: left;
+    height: 400px;
+    width: 30%;
+}
+
+.cat-abs {
+    margin-bottom: 30px;
+    text-align: center;
+    border: 2px solid #A6E3E9;
+    margin-left: 25px;
+    padding: 8px 8px 8px 8px;
+    border-radius: 20px;
+    background-color: #CBF1F5;
+}
+
+.advertisement{
+    list-style: none;
+    padding-left: 0;
+}
+
+.advertisement p{
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.advertisement li{
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.cat-abs hr{
+    background-color: #A6E3E9;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    border: none;
+    color: #A6E3E9;
+    height: 2px;
+}
+
+.title-abs{
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.page-btn{
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.page-btn a{
+    border: 2px solid #A6E3E9;
+    border-radius: 10px;
+    background: #CBF1F5;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+}
+
+
+.add-form {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 30px;
+}
+
+.form-btn {
+    background: black;
+    padding: 15px 20px;
+    color: white;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.form-btn:hover {
+    opacity: 0.9;
+}
+
+.help-text {
+    color: #71C9CE;
+}
+
+.cat-view {
+
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.cat-view > div {
+    float: left;
+    background: #CBF1F5;
+    height: 300px;
+    width: 30%;
+}
+
+.cat{
+    margin-bottom: 30px;
+    text-align: center;
+    border: 1px solid #A6E3E9;
+    padding: 8px 8px 8px 8px;
+    margin-left: 25px;
+    border-radius: 20px;
+
+}
+
+img {
+    box-shadow: 4px 4px 14px #000025;
+}
+
+.profile-stl{
+    margin-left: 30%;
+    margin-right: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.profile-stl img{
+    border-radius: 50%;
+}
+
+.profile-info {
+    margin-left: 50px;
+}
+
+.detail-stl{
+    margin-left: 30%;
+    margin-right: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.detail-info {
+    margin-left: 50px;
+    list-style: none;
+}
+
+.detail-bld {
+    font-weight: bold;
+}
+
+.detail-bld p{
+    font-weight: normal;
+}
+
+.del-form {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.del-form input{
+    background: red;
+}
+
+.message{
+    font-weight: bold;
+    width: 100%;
+    font-size: 22px;
+    color: #97ff41;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.message hr{
+    background-color: #97ff41;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    border: none;
+    color: #97ff41;
+    height: 2px;
+}

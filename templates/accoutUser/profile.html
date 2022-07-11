@@ -1,0 +1,32 @@
+{% extends 'eBord/basic.html' %}
+{% block title %}
+Профиль пользователя {{ profile.user.username }}
+{% endblock title %}
+{% block content %}
+    <div class="profile-stl">
+        <img src="{{ profile.image.url }}" width="256" height="256">
+        <div class="detail-info">
+            <p>Логин: {{ profile.user.username }}</p>
+            <p>Имя: {{ profile.user.get_full_name }}</p>
+            <p>Почта: {{ profile.user.email }}</p>
+            <p>Город: {{ profile.city }}</p>
+            {% if profile.pk == user.userprofilemodel.pk %}
+                <a href="{% url 'update-profile' %}">
+                    <div class="btn-change">Редактировать</div>
+                </a>
+                <a href="{% url 'password_change' %}">
+                    <div class="btn-change-pswrd">Сменить пароль</div>
+                </a>
+                <a href="{% url 'by_user' profile.user.pk %}">
+                <div class="btn-user-ads">Мои объявления</div>
+            </a>
+            {% else %}
+            <a href="{% url 'by_user' profile.user.pk %}">
+                <div class="btn-user-ads">Объявления пользователя</div>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock content %}
+
